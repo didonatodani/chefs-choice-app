@@ -1,21 +1,35 @@
-.sidebar{
-    display: block;
-    background-color: #a76a3b;
-    width: 25%;
-    height: 100dvh;
-    padding: 50px;
-    #menu-icon{
-        width: 40px;
-    }
-    li{
-        font-family: "Abril Fatface", serif;
-        font-size: 1.5rem;
-        list-style: none;
-        text-align: right;
-        margin: 40px auto;
-        color: #ffff;
-    }
-    li:hover{
-        color: #000;
-    }
+.sidebar {
+  background-color: #a76a3b;
+  width: 5%;
+  height: 100dvh;
+  padding: 50px;
+  transition: width 0.3s ease;
+
+  #menu-icon {
+    width: 40px;
+  }
+
+  li {
+    display: none;
+  }
+}
+
+.sidebar:hover {
+  width: 20%;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: end;
+    font-family: "Abril Fatface", serif;
+    font-size: 1.5rem;
+    list-style: none;
+    /*text-align: right;*/
+    margin: 40px auto;
+    color: #000;
+  }
+  li:hover {
+    color: #ddd0c6;
+  }
 }
