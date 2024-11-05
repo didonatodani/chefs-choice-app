@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
+    align-content: center;
     background-color: #a28f81;
     padding: 20px 80px;
     
@@ -10,9 +11,8 @@
     h1 {
         font-family: "Abril Fatface", serif;
         font-size: 2.5rem;
-        font-weight: 300;
         text-decoration-line: underline;
-        color: #000;
+        color: #fff;
     }
     h1:hover {
         color: #000;
