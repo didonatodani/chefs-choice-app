@@ -6,13 +6,17 @@
     align-content: center;
     background-color: #a28f81;
     padding: 20px 80px;
+    
 
     h1 {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: "Abril Fatface", serif;
         font-size: 2.5rem;
-        
+        text-decoration-line: underline;
+        color: #fff;
     }
-
+    h1:hover {
+        color: #000;
+    }
     #logo {
         width: 64px;
     }
