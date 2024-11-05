@@ -1,24 +1,50 @@
 .navbar-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
-    align-content: center;
-    background-color: #ddd0c6;
-    padding: 20px 80px;
-    
-
+    background-color:  #FFF7F1;
+    border-bottom: 1px #a76a3b solid;
+    padding: 20px;
+    height: 20dvh;
     h1 {
-        font-family: "Abril Fatface", serif;
-        font-size: 2.5rem;
-        text-decoration-line: underline;
-        color: #000;
+        font-size: 30px;
+        cursor: pointer;
+        height: 50px;
     }
     h1:hover {
         color: #a76a3b;
     }
     #logo {
-        width: 64px;
+        width: 35px;
     }
 }
 
+@media (width > 650px){
+    .navbar-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+        padding: 20px 80px;
+        h1 {
+            font-size: 40px;
+            cursor: pointer;
+            height: 40px;
+        }
+        #logo {
+            width: 50px;
+        }
+    }
+}
+
+@media (width > 1024px) {
+    .navbar-container {
+        h1{
+            font-size: 50px;
+            height: 50px;
+        }
+        #logo {
+            width: 64px;
+        }
+    }
+}

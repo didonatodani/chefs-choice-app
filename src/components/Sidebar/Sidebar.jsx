@@ -1,6 +1,6 @@
 import "./Sidebar.css"
 import menuIcon from "../../assets/menu-icon.svg"
-import closeIcon from "../../assets/close-icon.svg"
+
 
 function Sidebar(){
     return(

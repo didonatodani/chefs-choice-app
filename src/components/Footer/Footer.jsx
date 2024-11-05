@@ -6,7 +6,7 @@ function Footer() {
     <footer className="footer">
         <small>By Nigel Ferreres & Dani Di Donato</small>
       <a href="https://github.com/didonatodani/chefs-choice-app" target="_blank">
-        <img src={gitHubIcon} alt="Git Hug icon" />
+        <img src={gitHubIcon} alt="Git Hub icon"/>
       </a>
     </footer>
   );
