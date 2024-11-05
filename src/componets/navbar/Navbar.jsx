@@ -1,4 +1,4 @@
-import logoImg from "../../assets/logo-chef.png";
+import logoImg from "../../assets/logo-chef-white.png";
 import './Navbar.css';
 
 function Navbar() {
