@@ -1,5 +1,6 @@
 import recipesData from "../../data/recipesData.json"
 import RecipesCard from "../RecipesCard/RecipesCard"
+import "./RecipesList.css"
 import { useState } from "react"
 
 function RecipesList (){

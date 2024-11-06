@@ -1,14 +1,13 @@
 .sidebar {
   background-color: #a76a3b;
-  width: 80px;
-  height: 80dvh;
+  width: 100dvw;
+  height: 80px;
   padding: 20px;
-  transition: width 0.3s ease;
+  transition: heigth 0.3s ease;
+  text-align: center;
 
   #menu-icon {
     width: 40px;
-    margin: 0 auto;
-    cursor: pointer;
   }
 
   li {
@@ -16,23 +15,58 @@
   }
 }
 
-.sidebar:hover {
-  width: 20%;
+.sidebar:focus, .sidebar:hover {
+  height: 150px;
 
-  li {
+  ul{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: end;
+    flex-direction: row;
+    justify-content: space-around;
     font-family: "Abril Fatface", serif;
     font-size: 1.5rem;
     list-style: none;
-    margin-bottom: 40px;
     transition: 500ms;
     cursor: pointer;
+  }
+  li{
+    display: block;
+    margin-top: 30px;
   }
   li:hover {
     color: #ddd0c6;
     transition: 500ms;
   }
+}
+
+@media (width > 650px){
+
+  .sidebar {
+    width: 80px;
+    min-height: 80dvh;
+    padding: 20px;
+    transition: width 0.3s ease;
+    text-align: unset;
+
+    #menu-icon {
+      width: 40px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+  
+    li {
+      display: none;
+    }
+  }
+  
+  .sidebar:hover {
+    width: 20%;
+  
+    ul {
+      flex-direction: column;
+      justify-content: center;
+      text-align: end;
+      margin-bottom: 40px;
+    }
+  }
+
 }

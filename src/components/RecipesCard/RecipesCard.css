@@ -1,0 +1,7 @@
+.recipes-card{
+    width: 400px;
+    border: 1px red solid;
+    img{
+        width: 300px;
+    }
+}

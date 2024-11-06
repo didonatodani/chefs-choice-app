@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    justify-content: center;
     background-color:  #FFF7F1;
     border-bottom: 1px #a76a3b solid;
     padding: 20px;
