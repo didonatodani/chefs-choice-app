@@ -1,5 +1,6 @@
 import recipesData from "../../data/recipesData.json"
 import RecipesCard from "../RecipesCard/RecipesCard"
+import "./RecipesList.css"
 import { useState } from "react"
 import NewRecipe from "../NewRecipe/NewRecipe"
 
@@ -11,14 +12,12 @@ function sortRecipes(){
     
     const recipesCopy = [...recipesArray]
 
-
     recipesCopy.sort((a,b)=>{
         const calA = a.calories;
         const calB = b.calories;
 
        return  calA - calB
     })
-    console.log(recipesCopy)
 
     setRecipesArray(recipesCopy)
 }
@@ -26,12 +25,15 @@ function sortRecipes(){
 function deleteItem(id){
 
     const anotherCopy = recipesArray.filter((food)=>{
-        if (food.id !== id){
-            return food
-        }
-        return 
+        //THIS CAN BE SIMPLIFIED:
+        // if (food.id !== id){
+        //     return food TRUTHY
+        // }
+        // return FALSY
+        return food.id !== id //TRUE OR FALSE
     })
 
+    setRecipesArray(anotherCopy) //TO UPDATE THE ARRAY
     setRecipesArray(anotherCopy)
 }
 
