@@ -1,6 +1,7 @@
 import recipesData from "../../data/recipesData.json"
 import RecipesCard from "../RecipesCard/RecipesCard"
 import { useState } from "react"
+import NewRecipe from "../NewRecipe/NewRecipe"
 
 function RecipesList (){
 
@@ -31,18 +32,17 @@ function deleteItem(id){
         return 
     })
 
-    console.log(anotherCopy)
     setRecipesArray(anotherCopy)
 }
 
     return(
         <section className="recipes-list-container">
-
+            <NewRecipe recipesArray={recipesArray} setRecipesArray={setRecipesArray}/>
             <button onClick={sortRecipes}>Sort by calories</button>
             {
                 recipesArray.map((recipe)=>(
                     <div key={recipe.id}>
-                        <RecipesCard  recipe={recipe}/>
+                        <RecipesCard key={recipe.id} recipe={recipe}/>
                         <button onClick={() => deleteItem(recipe.id)}>X</button>
                     </div>
                 ))
