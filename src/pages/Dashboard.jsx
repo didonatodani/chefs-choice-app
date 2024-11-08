@@ -1,8 +1,13 @@
-function Dashboard (){
-    return(
-        <>
-        </>
-    )
-}
+import RecipesList from "../components/RecipesList/RecipesList";
 
-export default Dashboard
+function Dashboard() {
+ 
+    return (
+        <>
+        <RecipesList/>
+        </>
+    );
+  }
+  
+  export default Dashboard;
+  
