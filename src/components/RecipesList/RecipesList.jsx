@@ -2,7 +2,7 @@ import recipesData from "../../data/recipesData.json";
 import RecipesCard from "../RecipesCard/RecipesCard";
 import { useState } from "react";
 import NewRecipe from "../NewRecipe/NewRecipe";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function RecipesList() {
   const [recipesArray, setRecipesArray] = useState(recipesData);
@@ -35,7 +35,9 @@ function RecipesList() {
       <button onClick={sortRecipes}>Sort by calories</button>
       {recipesArray.map((recipe) => (
         <div key={recipe.id}>
-          <RecipesCard key={recipe.id} recipe={recipe} />
+            <Link key={recipe.id} to={`/items/${recipe.id}`}>
+                <RecipesCard  recipe={recipe} />
+            </Link>
           <button onClick={() => deleteItem(recipe.id)}>X</button>
         </div>
       ))}
