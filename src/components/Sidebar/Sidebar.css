@@ -11,7 +11,7 @@
     cursor: pointer;
   }
 
-  li {
+  .sidebar-link {
     display: none;
   }
 }
@@ -19,7 +19,7 @@
 .sidebar:hover {
   width: 20%;
 
-  li {
+  .sidebar-link {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,7 +31,7 @@
     transition: 500ms;
     cursor: pointer;
   }
-  li:hover {
+  .sidebar-link:hover {
     color: #ddd0c6;
     transition: 500ms;
   }
