@@ -1,5 +1,6 @@
 import "./Sidebar.css"
 import menuIcon from "../../assets/menu-icon.svg"
+import { NavLink } from "react-router-dom"
 
 
 function Sidebar(){
@@ -7,9 +8,8 @@ function Sidebar(){
         <aside className="sidebar">
             <img src={menuIcon} alt="menu icon" id="menu-icon"/>
             <ul>
-                <li>Home</li>
-                <li>Recipes</li>
-                <li>About</li>
+                <NavLink className="sidebar-link" to="/">Home</NavLink>
+                <NavLink className="sidebar-link" to="/about">About</NavLink>
             </ul>
         </aside>
     )
