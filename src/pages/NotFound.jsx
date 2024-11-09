@@ -1,6 +1,10 @@
+import "./Notfound.css"
+
 function NotFound() {
     return (
-        <h1>Error 404 Page Not Found</h1>
+        <div className="not-found-div">
+            <img src="src/assets/404.png" alt="404 error image" id="error-img" />
+        </div>
     )
 }
 
