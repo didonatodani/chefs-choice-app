@@ -22,11 +22,7 @@ function RecipesList() {
 
   function deleteItem(id) {
     const anotherCopy = recipesArray.filter((food) => food.id !== id);
-
-    setRecipesArray(anotherCopy) //TO UPDATE THE ARRAY
-    setRecipesArray(anotherCopy)
-}
-    setRecipesArray(anotherCopy);
+    setRecipesArray(anotherCopy); //TO UPDATE THE ARRAY
   }
 
   return (
@@ -38,9 +34,9 @@ function RecipesList() {
       <button onClick={sortRecipes}>Sort by calories</button>
       {recipesArray.map((recipe) => (
         <div key={recipe.id}>
-            <Link key={recipe.id} to={`/items/${recipe.id}`}>
-                <RecipesCard  recipe={recipe} />
-            </Link>
+          <Link key={recipe.id} to={`/items/${recipe.id}`}>
+            <RecipesCard recipe={recipe} />
+          </Link>
           <button onClick={() => deleteItem(recipe.id)}>X</button>
         </div>
       ))}
