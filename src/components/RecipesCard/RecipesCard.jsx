@@ -18,6 +18,10 @@ console.log("This is the ID: ",recipeId); //Undefined
   });
   //si cambiamoS recipeId por un id real(por ej "9e7f0d61-aa6b-418a-b56a-6418d19e6e1d", SÍ FUNCIONA EL RENDERIZADO)
 
+  if(!recipeDetail){
+    return <h1>Details not found</h1>
+  } //Cambio, borrar este codigo para dejarlo igual
+
   return (
     <div className="recipes-card">
       <img src={recipeDetail.image} alt="" />

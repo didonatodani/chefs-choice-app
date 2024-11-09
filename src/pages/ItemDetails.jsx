@@ -1,7 +1,11 @@
-function ItemDetails(){
-    return(
-        <h1>ITEM DETAIL PAGE</h1>
+import RecipesCard from "../components/RecipesCard/RecipesCard"
 
+function ItemDetails(){
+    //Se ha añadido el componente
+    return(
+        <>
+        <RecipesCard /> 
+        </>
     )
 }
 

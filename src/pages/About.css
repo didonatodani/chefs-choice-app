@@ -1,0 +1,88 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 3rem;
+  gap: 2rem;
+  height: auto;
+  hr {
+    margin: 4rem auto;
+    border: none;
+    border-radius: 10px;
+    height: 5px;
+    background: linear-gradient(
+      to right,
+      #a76a3b,
+      #33ccff,
+      #a76a3b
+    ); /* Bright neon colors */
+    box-shadow: 0 0 8px #a4ff35, 0 0 20px #33ccff, 0 0 40px #33ccff,
+      0 0 80px #a4ff35; /* Glowing effect */
+    /*animation: neon-flicker 1.5s ease-in-out infinite alternate; /* Animation */
+    animation: neon-glow-on 2s ease-in-out forwards;
+  }
+}
+
+.about-title h2 {
+  margin-bottom: 2rem;
+}
+
+.about-team {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.about-member {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#profile-nigel {
+  width: 8rem;
+}
+
+@keyframes neon-flicker {
+  0% {
+    box-shadow: 0 0 8px #a4ff35, 0 0 20px #33ccff, 0 0 40px #33ccff,
+      0 0 80px #a4ff35;
+    opacity: 1;
+  }
+  25% {
+    box-shadow: 0 0 12px #ff00cc, 0 0 25px #33ccff, 0 0 50px #ff00cc,
+      0 0 100px #ff00cc;
+    opacity: 0.8;
+  }
+  50% {
+    box-shadow: 0 0 16px #ff00cc, 0 0 30px #33ccff, 0 0 60px #ff00cc,
+      0 0 120px #ff00cc;
+    opacity: 0.6;
+  }
+  75% {
+    box-shadow: 0 0 12px #a4ff35, 0 0 25px #33ccff, 0 0 50px #a4ff35,
+      0 0 100px #33ccff;
+    opacity: 0.9;
+  }
+  100% {
+    box-shadow: 0 0 8px #a4ff35, 0 0 20px #33ccff, 0 0 40px #33ccff,
+      0 0 80px #a4ff35;
+    opacity: 1;
+  }
+}
+@keyframes neon-glow-on {
+    0% {
+      box-shadow: 0 0 0px #a4ff35, 0 0 0px #33ccff, 0 0 0px #33ccff, 0 0 0px #a4ff35; /* Sin resplandor al principio */
+      opacity: 0; /* Comienza apagado */
+    }
+    50% {
+      box-shadow: 0 0 8px #a4ff35, 0 0 20px #33ccff, 0 0 40px #33ccff, 0 0 80px #a4ff35; /* Resplandor débil */
+      opacity: 0.5; /* Luz parcialmente encendida */
+    }
+    100% {
+      box-shadow: 0 0 8px #a4ff35, 0 0 20px #33ccff, 0 0 40px #33ccff, 0 0 80px #a4ff35; /* Resplandor máximo */
+      opacity: 1; /* Luz completamente encendida */
+    }
+  }
