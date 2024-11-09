@@ -1,57 +1,51 @@
-import recipesData from "../../data/recipesData.json"
-import RecipesCard from "../RecipesCard/RecipesCard"
-import "./RecipesList.css"
-import { useState } from "react"
-import NewRecipe from "../NewRecipe/NewRecipe"
+import recipesData from "../../data/recipesData.json";
+import RecipesCard from "../RecipesCard/RecipesCard";
+import { useState } from "react";
+import NewRecipe from "../NewRecipe/NewRecipe";
+import { Link } from "react-router-dom";
 
-function RecipesList (){
+function RecipesList() {
+  const [recipesArray, setRecipesArray] = useState(recipesData);
 
-const [recipesArray, setRecipesArray] = useState(recipesData)
+  function sortRecipes() {
+    const recipesCopy = [...recipesArray];
 
-function sortRecipes(){
-    
-    const recipesCopy = [...recipesArray]
+    recipesCopy.sort((a, b) => {
+      const calA = a.calories;
+      const calB = b.calories;
 
-    recipesCopy.sort((a,b)=>{
-        const calA = a.calories;
-        const calB = b.calories;
+      return calA - calB;
+    });
 
-       return  calA - calB
-    })
+    setRecipesArray(recipesCopy);
+  }
 
-    setRecipesArray(recipesCopy)
-}
-
-function deleteItem(id){
-
-    const anotherCopy = recipesArray.filter((food)=>{
-        //THIS CAN BE SIMPLIFIED:
-        // if (food.id !== id){
-        //     return food TRUTHY
-        // }
-        // return FALSY
-        return food.id !== id //TRUE OR FALSE
-    })
+  function deleteItem(id) {
+    const anotherCopy = recipesArray.filter((food) => food.id !== id);
 
     setRecipesArray(anotherCopy) //TO UPDATE THE ARRAY
     setRecipesArray(anotherCopy)
 }
+    setRecipesArray(anotherCopy);
+  }
 
-    return(
-        <section className="recipes-list-container">
-            <NewRecipe recipesArray={recipesArray} setRecipesArray={setRecipesArray}/>
-            <button onClick={sortRecipes}>Sort by calories</button>
-            {
-                recipesArray.map((recipe)=>(
-                    <div key={recipe.id}>
-                        <RecipesCard key={recipe.id} recipe={recipe}/>
-                        <button onClick={() => deleteItem(recipe.id)}>X</button>
-                    </div>
-                ))
-            }
-
-        </section>
-    )
+  return (
+    <section className="recipes-list-container">
+      <NewRecipe
+        recipesArray={recipesArray}
+        setRecipesArray={setRecipesArray}
+      />
+      <button onClick={sortRecipes}>Sort by calories</button>
+      {recipesArray.map((recipe) => (
+        <div key={recipe.id}>
+            <Link key={recipe.id} to={`/items/${recipe.id}`}>
+                <RecipesCard  recipe={recipe} />
+            </Link>
+          <button onClick={() => deleteItem(recipe.id)}>X</button>
+        </div>
+      ))}
+    </section>
+  );
 }
 
-export default RecipesList
+export default RecipesList;
