@@ -1,5 +1,10 @@
 .recipes-list-container{
+    width: 80%;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    /* display: none; */
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+
 }

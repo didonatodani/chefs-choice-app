@@ -12,8 +12,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <Sidebar />
+      
       <section className="main-app-container">
+      <Sidebar />
         <Routes>
           <Route path="/" element={<Dashboard/>}/>
           <Route path="/about" element={<About/>}/>

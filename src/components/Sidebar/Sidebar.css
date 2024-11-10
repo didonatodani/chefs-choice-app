@@ -1,14 +1,16 @@
 .sidebar {
   background-color: #a76a3b;
-  width: 100dvw;
+  width: 100%;
   height: 80px;
   padding: 20px;
   transition: heigth 0.3s ease;
-
+  position: relative;
   #menu-icon {
+    position: relative;
+    left: 50%;
+    translate: -50%;
     width: 40px;
   }
-
   .sidebar-ul {
     display: none;
   }
@@ -24,7 +26,6 @@
     align-items: end;
     justify-content: space-around;
     margin-top: 20px;
-    transition: display 1s;
 
     .sidebar-link {
       font-family: "Abril Fatface", serif;
@@ -36,22 +37,20 @@
     }
 
   }
-
   .sidebar-link:hover {
     color: #ddd0c6;
     transition: 500ms;
   }
 }
 
-/* 
+
 @media (width > 650px){
 
   .sidebar {
     width: 80px;
-    min-height: 80dvh;
+    height: 100dvh;
     padding: 20px;
     transition: width 0.3s ease;
-    text-align: unset;
     #menu-icon {
       width: 40px;
       margin: 0 auto;
@@ -65,10 +64,9 @@
   }
   
   .sidebar:hover {
-    width: 20%;
+    width: 150px;
+    height: 100%;
     justify-content: end;
-  
-  
     .sidebar-ul {
       flex-direction: column;
       justify-content: center;
@@ -76,4 +74,4 @@
     }
   }
 
-} */
+}

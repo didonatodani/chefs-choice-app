@@ -3,6 +3,7 @@ import RecipesCard from "../RecipesCard/RecipesCard";
 import { useState } from "react";
 import NewRecipe from "../NewRecipe/NewRecipe";
 import { Link } from "react-router-dom";
+import "./RecipesList.css"
 
 function RecipesList() {
   const [recipesArray, setRecipesArray] = useState(recipesData);

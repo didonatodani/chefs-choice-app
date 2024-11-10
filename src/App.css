@@ -11,8 +11,10 @@ FONTS:
 h1... font: font-family: "Abril Fatface", serif;
 p, etc: font-family: "Gowun Dodum", sans-serif;
 */
-
-.main-app-container{
-    display: flex;
+@media (width > 650px){
+  .main-app-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
     min-height: 80dvh;
+  }
 }

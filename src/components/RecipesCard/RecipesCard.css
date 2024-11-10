@@ -1,7 +1,7 @@
-.recipes-card{
-    width: 400px;
+.recipe-card, .recipe-link-div{
+    width: 200px;
     border: 1px red solid;
-    img{
-        width: 300px;
+    .recipe-img{
+        width: 150px;
     }
 }
