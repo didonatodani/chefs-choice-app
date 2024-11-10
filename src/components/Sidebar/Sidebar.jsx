@@ -7,7 +7,7 @@ function Sidebar(){
     return(
         <aside className="sidebar">
             <img src={menuIcon} alt="menu icon" id="menu-icon"/>
-            <ul>
+            <ul className="sidebar-ul">
                 <NavLink className="sidebar-link" to="/">Home</NavLink>
                 <NavLink className="sidebar-link" to="/about">About</NavLink>
             </ul>

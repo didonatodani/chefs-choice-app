@@ -32,14 +32,17 @@ function RecipesList() {
         setRecipesArray={setRecipesArray}
       />
       <button onClick={sortRecipes}>Sort by calories</button>
-      {recipesArray.map((recipe) => (
-        <div key={recipe.id}>
+
+      {
+      recipesArray.map((recipe) => (
+        <div key={recipe.id} className="recipe-link-div">
           <Link key={recipe.id} to={`/items/${recipe.id}`}>
-            <RecipesCard recipe={recipe} />
+            <RecipesCard recipe={recipe}/>
           </Link>
           <button onClick={() => deleteItem(recipe.id)}>X</button>
         </div>
-      ))}
+      ))
+      }
     </section>
   );
 }
