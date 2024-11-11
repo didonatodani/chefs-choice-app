@@ -3,7 +3,7 @@ import RecipesCard from "../RecipesCard/RecipesCard";
 import { useState } from "react";
 import NewRecipe from "../NewRecipe/NewRecipe";
 import { Link } from "react-router-dom";
-import "./RecipesList.css"
+import "./RecipesList.css";
 
 function RecipesList() {
   const [recipesArray, setRecipesArray] = useState(recipesData);
@@ -28,22 +28,22 @@ function RecipesList() {
 
   return (
     <section className="recipes-list-container">
-      <NewRecipe
-        recipesArray={recipesArray}
-        setRecipesArray={setRecipesArray}
-      />
-      <button onClick={sortRecipes}>Sort by calories</button>
+      <div className="extra-features-div">
+        <NewRecipe
+          recipesArray={recipesArray}
+          setRecipesArray={setRecipesArray}
+        />
+        <button onClick={sortRecipes} id="sort-btn">Sort by calories</button>
+      </div>
 
-      {
-      recipesArray.map((recipe) => (
+      {recipesArray.map((recipe) => (
         <div key={recipe.id} className="recipe-link-div">
           <Link key={recipe.id} to={`/items/${recipe.id}`}>
-            <RecipesCard recipe={recipe}/>
+            <RecipesCard recipe={recipe} />
           </Link>
           <button onClick={() => deleteItem(recipe.id)}>X</button>
         </div>
-      ))
-      }
+      ))}
     </section>
   );
 }

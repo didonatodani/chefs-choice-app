@@ -1,8 +1,13 @@
-.recipe-card, .recipe-link-div{
+/* .recipe-card, .recipe-link-div{
     width: 200px;
+    height: 300px;
     border: 1px red solid;
-    .recipe-img{
-        width: 150px;
-    }
-}
+    
+} */
 
+.recipe-img{
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
