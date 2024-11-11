@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import recipesData from "../data/recipesData.json"
+import "./ItemDetails.css"
 
 function ItemDetails(){
 
@@ -12,11 +13,11 @@ const recipeDetail = recipesData.find((recipe) => {
 console.log("this is the recipedetail log:" , recipeDetail)
 
     return(
-        <div>
+        <div className="container">
             <h2>{recipeDetail.name}</h2>
             <img src={recipeDetail.image} alt={`imagen de ${recipeDetail.name}`} />
-            <p>Calories: {recipeDetail.calories}</p>
-            <p>Servings: {recipeDetail.servings}</p>
+            <p><strong>Calories:</strong> {recipeDetail.calories}</p>
+            <p><strong>Servings:</strong> {recipeDetail.servings}</p>
         </div>
     )
 }
