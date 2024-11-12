@@ -8,6 +8,10 @@
     border-bottom: 1px #a76a3b solid;
     padding: 20px;
     height: 20dvh;
+    a {
+        text-decoration: none;
+    }
+    
     h1 {
         font-size: 30px;
         cursor: pointer;

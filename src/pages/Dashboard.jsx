@@ -1,13 +1,14 @@
 import RecipesList from "../components/RecipesList/RecipesList";
 
-function Dashboard() {
- 
-    return (
-        <>
-        <RecipesList/>
-        </>
-    );
-  }
-  
-  export default Dashboard;
-  
+function Dashboard({ recipesArray, setRecipesArray }) {
+  return (
+    <>
+      <RecipesList
+        recipesArray={recipesArray}
+        setRecipesArray={setRecipesArray}
+      />
+    </>
+  );
+}
+
+export default Dashboard;

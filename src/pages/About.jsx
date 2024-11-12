@@ -1,5 +1,6 @@
 import "./About.css";
 import profileNigel from "../assets/Nigel-profile-img.png";
+import profileDani from "../assets/dani.jpg"
 
 function About() {
   return (
@@ -8,7 +9,7 @@ function About() {
       <div className="container-responsive">
       <section className="about-team">
         <article className="about-member dani">
-          <img src="" alt="Profile img" />
+          <img id="profile-dani"src={profileDani} alt="Profile img" />
           <h3>Dani</h3>
           <p>Description</p>
         </article>

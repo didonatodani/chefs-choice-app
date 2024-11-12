@@ -1,13 +1,12 @@
-import recipesData from "../../data/recipesData.json";
+
 import RecipesCard from "../RecipesCard/RecipesCard";
-import { useState } from "react";
+//import { useState } from "react";
 import NewRecipe from "../NewRecipe/NewRecipe";
 import { Link } from "react-router-dom";
 import "./RecipesList.css";
 
-function RecipesList() {
-  const [recipesArray, setRecipesArray] = useState(recipesData);
-
+function RecipesList({recipesArray, setRecipesArray}) {
+  console.log(recipesArray)
   function sortRecipes() {
     const recipesCopy = [...recipesArray];
 
@@ -39,9 +38,9 @@ function RecipesList() {
       {recipesArray.map((recipe) => (
         <div key={recipe.id} className="recipe-link-div">
           <Link key={recipe.id} to={`/items/${recipe.id}`}>
-            <RecipesCard recipe={recipe} />
+            <RecipesCard recipe={recipe} recipesArray={recipesArray} setRecipesArray={setRecipesArray}/>
           </Link>
-          <button onClick={() => deleteItem(recipe.id)}>X</button>
+          <button onClick={() => deleteItem(recipe.id)} className="btn">X</button>
         </div>
       ))}
     </section>

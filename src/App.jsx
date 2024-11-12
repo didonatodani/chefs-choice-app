@@ -7,8 +7,12 @@ import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import ItemDetails from "./pages/ItemDetails";
+import recipesData from "./data/recipesData.json";
+import { useState } from "react";
 
 function App() {
+  const [recipesArray, setRecipesArray] = useState(recipesData);
+
   return (
     <>
       <Navbar />
@@ -16,9 +20,9 @@ function App() {
       <section className="main-app-container">
       <Sidebar />
         <Routes>
-          <Route path="/" element={<Dashboard/>}/>
+          <Route path="/" element={<Dashboard recipesArray={recipesArray} setRecipesArray={setRecipesArray}/>}/>
           <Route path="/about" element={<About/>}/>
-          <Route path="/items/:recipeId" element={<ItemDetails/>}/>
+          <Route path="/items/:recipeId" element={<ItemDetails recipesArray={recipesArray} setRecipesArray={setRecipesArray}/>}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </section>

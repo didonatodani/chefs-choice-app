@@ -29,7 +29,7 @@
   flex-direction: column;
 }
 
-#profile-nigel {
+#profile-nigel, #profile-dani {
   width: 100px;
 }
 
@@ -55,7 +55,7 @@
   }
 
  
-  #profile-nigel {
+  #profile-nigel, #profile-dani {
     width: 200px;
   }
 }
