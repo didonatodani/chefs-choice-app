@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useId } from "react";
 import "./NewRecipe.css";
+import { toast } from 'react-toastify';
+import Toast from "../Toast/Toast";
 
 function NewRecipe({ recipesArray, setRecipesArray }) {
   const [name, setName] = useState("");
@@ -21,15 +23,24 @@ function NewRecipe({ recipesArray, setRecipesArray }) {
       servings,
     };
 
-    console.log(newRecipe);
-
     setRecipesArray([...recipesArray, newRecipe]);
+    setIsAdding(false)
+    toast.success("Recipe added successfully!");
   }
+
 
   return (
     <>
+    <Toast />
       {!isAdding ? (
-        <button onClick={()=>{setIsAdding(!isAdding)}} className="btn">Add a recipe!</button>
+        <button
+          onClick={() => {
+            setIsAdding(!isAdding);
+          }}
+          className="btn"
+        >
+          Add a recipe!
+        </button>
       ) : (
         <>
           {" "}
@@ -77,7 +88,14 @@ function NewRecipe({ recipesArray, setRecipesArray }) {
               </button>
             </div>
           </form>
-          <button onClick={()=>{setIsAdding(!isAdding)}} className="form-btn btn">Cancel</button>{" "}
+          <button
+            onClick={() => {
+              setIsAdding(!isAdding);
+            }}
+            className="form-btn btn"
+          >
+            Cancel
+          </button>{" "}
         </>
       )}
     </>
