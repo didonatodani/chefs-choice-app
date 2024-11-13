@@ -25,15 +25,16 @@
 
     }
 
-    #form-btn {
+    .form-btn {
         width: 100%;
+        max-width: 600px;
         height: 26px;
         border: none;
         background-color: #a76a3b;
         color: #FFF7F1;
     }
 
-    #form-btn:hover {
+    .form-btn:hover {
         background-color: #FFF7F1;
         border: 2px #a76a3b solid;
         color: #a76a3b;
@@ -44,6 +45,9 @@
 @media (width > 650px) {
     #form{
         width: 600px;
+        .form-btn{
+            max-width:600px;
+        }
 
     }
 }

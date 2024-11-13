@@ -21,6 +21,7 @@
             border: none;
             background-color: #a76a3b;
             color: #FFF7F1;
+            margin-top: 5px;
         }
 
         #sort-btn:hover {
@@ -28,6 +29,7 @@
             border: 2px #a76a3b solid;
             color: #a76a3b;
         }
+        
     }
     .recipe-link-div{
         width: 250px;
@@ -35,7 +37,7 @@
         border: 1px #a76a3b solid;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         margin: 20px;
         a{
@@ -45,7 +47,12 @@
         h2{
             margin-top: 15px;
         }
+        .btn-knife{
+
+            height: 45px;
+        }
     }
+
 }
 
 @media (width > 650px) {

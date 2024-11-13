@@ -23,39 +23,57 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid #a76a3b;
 }
 .about-member {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 #profile-nigel, #profile-dani {
   width: 100px;
+  height: auto;
+  object-fit: cover;
 }
 
-@media (width > 650px) {
-  .about-container {
-    text-align: center;
-    padding: 1rem 3rem;
-    height: auto;
-    gap: 5rem;
+@media (width > 1024px) {
+.about-container {
+
     h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
+      margin-right: 2rem;
+    
     }
-    hr{
+    /* hr{
       display: none;
     }
-    
+  
+  } */
   }
   .container-responsive {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    .about-member{
+      height: 500px;
+      border: 1px solid #a76a3b;
+      margin: 20px;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      align-items: center;
+    }
   }
 
  
   #profile-nigel, #profile-dani {
     width: 200px;
+    height: 200px;
+
   }
-}
+} 
