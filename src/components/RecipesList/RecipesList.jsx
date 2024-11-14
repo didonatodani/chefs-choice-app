@@ -5,7 +5,7 @@ import "./RecipesList.css";
 import deleteButton from "../../assets/delete.svg"
 
 function RecipesList({recipesArray, setRecipesArray}) {
-  console.log(recipesArray)
+
   function sortRecipes() {
     const recipesCopy = [...recipesArray];
 

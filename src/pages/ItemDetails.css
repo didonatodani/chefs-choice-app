@@ -16,6 +16,7 @@
 }
 
 .form-btn{
+    margin-top: 5px;
         width: 100%;
         height: 26px;
         border: none;
@@ -27,6 +28,7 @@
         background-color: #FFF7F1;
         border: 2px #a76a3b solid;
         color: #a76a3b;
+        transition: 500ms;
     }
 
 @media (width > 650px) {
@@ -36,7 +38,7 @@
         }
         img {
             width: 90%;
-            max-width: 650px;
+            max-width: 500px;
         }
         p {
             font-size: 1.5rem;

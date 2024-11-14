@@ -33,7 +33,7 @@ function ItemDetails({ setRecipesArray }) {
           recipeDetail={recipeDetail}
           setRecipesArray={setRecipesArray}
         />
-        <button className="form-btn" onClick={handleSubmit}>Back to recipes list</button>
+        <button className="form-btn" onClick={handleSubmit}>Go back</button>
       </div>
     </div>
   );

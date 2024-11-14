@@ -17,6 +17,6 @@ h1, h2, h3, li{
   color: #000;
 }
 
-p, small, span{
+p, small, span, li, a, input{
   font-family: "Gowun Dodum", sans-serif;
 }

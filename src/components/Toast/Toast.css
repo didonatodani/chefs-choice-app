@@ -1,6 +1,13 @@
-.Toastify__toast-theme--light {
+/* .Toastify__toast-theme--light {
     background: #FFF7F1;
     color: #a76a3b;
     --toastify-icon-color-success: #a76a3b;
     --toastify-color-progress-success: #a76a3b;
+} */
+
+.Toastify__toast-theme--light {
+    background: #a76a3b;
+    color: #FFF7F1;
+    --toastify-icon-color-success: #FFF7F1;
+    --toastify-color-progress-success: #FFF7F1;
 }
