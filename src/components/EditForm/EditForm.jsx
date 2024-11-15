@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Toast from "../Toast/Toast";
-import { toast } from 'react-toastify';
+import { toast } from 'react-toastify'; // aaaaah you installed the library, good job! 👍
+
+// I had issues to find the css for this form, this css is in the  NewRecipe.css file, consider creating a common folder for the css files that are shared between components
+// example src/components/forms
 
 function EditForm({ recipeDetail, setRecipesArray }) {
   //const [editRecipe, setEditRecipe] = useState(recipeDetail)
@@ -19,15 +22,15 @@ function EditForm({ recipeDetail, setRecipesArray }) {
     recipeDetail.image = editImage;
     recipeDetail.servings = editServings;
 
-    setRecipesArray((prev) => [...prev]);
+    setRecipesArray((prev) => [...prev]); // good use of the spread operator to apply the changes ❤️
     setIsEditing(false);
-    toast.success("Recipe edited successfully!");
+    toast.success("Recipe edited successfully!"); // well done reading the documentation and implementing the library! 📖
   }
 
   return (
     <>
     <Toast />
-      {!isEditing ? (
+      {!isEditing ? ( // good use of ternary operator  👍
         <button
           onClick={() => {
             setIsEditing(true);

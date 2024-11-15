@@ -22,6 +22,7 @@ function RecipesList({recipesArray, setRecipesArray}) {
   function deleteItem(id) {
     const anotherCopy = recipesArray.filter((food) => food.id !== id);
     setRecipesArray(anotherCopy); //TO UPDATE THE ARRAY
+    // NICE! 💪 
   }
 
   return (

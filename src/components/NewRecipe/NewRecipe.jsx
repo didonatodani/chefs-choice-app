@@ -11,12 +11,14 @@ function NewRecipe({ recipesArray, setRecipesArray }) {
   const [servings, setServings] = useState(0);
   const [isAdding, setIsAdding] = useState(false);
 
-  const id = useId();
-
+  const id = useId(); 
+  // Why do you need this hook?
+  
   function handleSubmit(event) {
     event.preventDefault();
     const newRecipe = {
       id: Math.floor(Math.random() * 999999),
+      // When you create a new recipe, you are not using the id, you are generating a random id
       name,
       calories,
       image,
