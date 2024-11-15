@@ -3,7 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./Toast.css"
 
 function Toast() {
-
+  // LOL, nice job installing a new library! and making a good use of it! 
   return (
     <ToastContainer
       position="top-center"

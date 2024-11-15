@@ -28,6 +28,10 @@
     .form-btn {
         width: 100%;
         max-width: 600px;
+        /* 
+        good job here with the max-width 
+        this prevents the button from stretching too much on larger screens
+        */
         height: 26px;
         border: none;
         background-color: #a76a3b;

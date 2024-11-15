@@ -1,55 +1,59 @@
 .navbar-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    background-color:  #FFF7F1;
-    border-bottom: 1px #a76a3b solid;
-    padding: 20px;
-    height: 20dvh;
-    a {
-        text-decoration: none;
-    }
-    
-    h1 {
-        font-size: 30px;
-        cursor: pointer;
-        height: 50px;
-    }
-    h1:hover {
-        color: #a76a3b;
-    }
-    #logo {
-        width: 35px;
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff7f1;
+  border-bottom: 1px #a76a3b solid;
+  padding: 20px;
+  height: 20dvh;
+/* 
+    Careful when using vh, it's a relative unit that depends on the viewport height, if the phone is small, the navbar will be too small as well.
+    Consider using a fixed height or a min-height instead.
+*/
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 30px;
+    cursor: pointer;
+    height: 50px;
+  }
+  h1:hover {
+    color: #a76a3b;
+  }
+  #logo {
+    width: 35px;
+  }
 }
 
-@media (width > 650px){
-    .navbar-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: end;
-        padding: 20px 80px;
-        h1 {
-            font-size: 40px;
-            cursor: pointer;
-            height: 40px;
-        }
-        #logo {
-            width: 50px;
-        }
+@media (width > 650px) {
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    padding: 20px 80px;
+    h1 {
+      font-size: 40px;
+      cursor: pointer;
+      height: 40px;
     }
+    #logo {
+      width: 50px;
+    }
+  }
 }
 
 @media (width > 1024px) {
-    .navbar-container {
-        h1{
-            font-size: 50px;
-            height: 50px;
-        }
-        #logo {
-            width: 64px;
-        }
+  .navbar-container {
+    h1 {
+      font-size: 50px;
+      height: 50px;
     }
+    #logo {
+      width: 64px;
+    }
+  }
 }

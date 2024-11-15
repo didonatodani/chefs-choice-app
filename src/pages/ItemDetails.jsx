@@ -1,12 +1,12 @@
-import { useParams } from "react-router-dom";
-import recipesData from "../data/recipesData.json";
+// you can import multiple hooks from the same library in a single line
+import { useParams, useNavigate } from "react-router-dom";
+import recipesData from "../data/recipesData.json"; // do you really need this data here? 🤔
 import "./ItemDetails.css";
-import { useNavigate } from "react-router-dom";
 import EditForm from "../components/EditForm/EditForm";
 
 
-function ItemDetails({ setRecipesArray }) {
-  const { recipeId } = useParams();
+function ItemDetails({ setRecipesArray }) { // you did it the PRO way 😎
+  const { recipeId } = useParams(); // good use of useParams 👍
   const navigate = useNavigate();
 
   const recipeDetail = recipesData.find((recipe) => {
